@@ -1,0 +1,16 @@
+<div class="home-container">
+  <p-card>
+    <h2>Bienvenido</h2>
+    <p>Aqui es la pagina principal.</p>
+    <p-message *ngIf="successMessage" severity="success" [text]="successMessage"></p-message>
+    <p-message *ngIf="errorMessage" severity="error" [text]="errorMessage"></p-message>
+    <div class="p-field">
+      <label for="newItem">Agregar Item</label>
+      <input id="newItem" [(ngModel)]="newItem" name="newItem" pInputText />
+      <p-button label="Agregar" icon="pi pi-plus" (click)="addItem()"></p-button>
+    </div>
+    <ul>
+      <li *ngFor="let item of items">{{ item.name }}</li>
+    </ul>
+  </p-card>
+</div>

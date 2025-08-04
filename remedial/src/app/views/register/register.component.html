@@ -1,0 +1,22 @@
+<div class="register-container">
+  <p-card>
+    <h2>Registro</h2>
+    <p-message *ngIf="successMessage" severity="success" [text]="successMessage"></p-message>
+    <p-message *ngIf="errorMessage" severity="error" [text]="errorMessage"></p-message>
+    <form (ngSubmit)="onSubmit()">
+      <div class="p-field">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" [(ngModel)]="name" name="name" pInputText />
+      </div>
+      <div class="p-field">
+        <label for="email">Email</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" pInputText />
+      </div>
+      <div class="p-field">
+        <label for="password">Contraseña</label>
+        <p-password id="password" [(ngModel)]="password" name="password" [feedback]="true"></p-password>
+      </div>
+      <p-button label="Registrarse" type="submit"></p-button>
+    </form>
+  </p-card>
+</div>
