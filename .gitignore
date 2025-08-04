@@ -1,0 +1,6 @@
+backend/.env
+backend/serviceAccountKey.json
+backend/node_modules/
+remedial/node_modules/
+remedial/dist/
+remedial/.angular/cache/
